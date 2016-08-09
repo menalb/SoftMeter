@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{9F03E40C-D97E-4B47-A6ED-5BAA0BD5EE0E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6373ED10-B250-4F9B-8F31-AB3C51620517}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SmartMeter.Core", "src\SmartMeter.Core\SmartMeter.Core.xproj", "{01492B33-BE0E-44AE-B98D-ECB79C42EC0A}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SmartMeter.Tests", "src\SmartMeter.Tests\SmartMeter.Tests.xproj", "{B2EF54E3-9D4D-4998-957D-BAEBE9A9EEBD}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "XmlNotifier", "src\XmlNotifier\XmlNotifier.xproj", "{D7B74D91-B428-4CF2-A56C-F564DCE0DF23}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SmartMeter.VirtualMeter", "src\SmartMeter.VirtualMeter\SmartMeter.VirtualMeter.xproj", "{E9CEDBBF-A3B6-471A-B17D-9E4A27F16AFA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{01492B33-BE0E-44AE-B98D-ECB79C42EC0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01492B33-BE0E-44AE-B98D-ECB79C42EC0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01492B33-BE0E-44AE-B98D-ECB79C42EC0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01492B33-BE0E-44AE-B98D-ECB79C42EC0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2EF54E3-9D4D-4998-957D-BAEBE9A9EEBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2EF54E3-9D4D-4998-957D-BAEBE9A9EEBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2EF54E3-9D4D-4998-957D-BAEBE9A9EEBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2EF54E3-9D4D-4998-957D-BAEBE9A9EEBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7B74D91-B428-4CF2-A56C-F564DCE0DF23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7B74D91-B428-4CF2-A56C-F564DCE0DF23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7B74D91-B428-4CF2-A56C-F564DCE0DF23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7B74D91-B428-4CF2-A56C-F564DCE0DF23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9CEDBBF-A3B6-471A-B17D-9E4A27F16AFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9CEDBBF-A3B6-471A-B17D-9E4A27F16AFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9CEDBBF-A3B6-471A-B17D-9E4A27F16AFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9CEDBBF-A3B6-471A-B17D-9E4A27F16AFA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{01492B33-BE0E-44AE-B98D-ECB79C42EC0A} = {9F03E40C-D97E-4B47-A6ED-5BAA0BD5EE0E}
+		{B2EF54E3-9D4D-4998-957D-BAEBE9A9EEBD} = {9F03E40C-D97E-4B47-A6ED-5BAA0BD5EE0E}
+		{D7B74D91-B428-4CF2-A56C-F564DCE0DF23} = {9F03E40C-D97E-4B47-A6ED-5BAA0BD5EE0E}
+		{E9CEDBBF-A3B6-471A-B17D-9E4A27F16AFA} = {9F03E40C-D97E-4B47-A6ED-5BAA0BD5EE0E}
+	EndGlobalSection
+EndGlobal
