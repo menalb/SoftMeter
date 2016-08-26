@@ -24,7 +24,7 @@ namespace SmartMeter.VirtualMeter
                 appConfiguration.MessagesQueueAddress,
                 s =>
                 {
-                    var task = StartTask(appConfiguration, s.WseId);
+                    var task = StartTask(appConfiguration, s.MeterId);
                     task.Start();
                 }));
 
@@ -37,9 +37,9 @@ namespace SmartMeter.VirtualMeter
             Console.ReadKey();
         }
 
-        private static Task StartTask(AppConfiguration appConfiguration, int wseId)
+        private static Task StartTask(AppConfiguration appConfiguration, int meterId)
         {
-            return new Task(() => new SingleMeter(appConfiguration, new MeterInfo(wseId, "FIRST")
+            return new Task(() => new SingleMeter(appConfiguration, new MeterInfo(meterId, "FIRST")
             {
                 SupplierCode = "PPP",
                 MeterNo = "SMU91033",
@@ -48,12 +48,12 @@ namespace SmartMeter.VirtualMeter
             new CustomerInfo
             {
                 CardId = "9826176066400000038",
-                CustomerName = "Prepay Power " + wseId.ToString(),
+                CustomerName = "Prepay Power " + meterId.ToString(),
                 VatOnDebt = 0,
                 VatOnEnergy = 59,
                 VatRate = 13.5m
             },
-            new TopUpRequest { WseId = 403030, Amount = 10, RequesterId = "111111", AgentNo = "FREE", Code = new Guid().ToString(), PaymentMode = 0, RetailerCode = "PAYPOINT", VendType = 0 }
+            new TopUpRequest { MeterId = 403030, Amount = 10, RequesterId = "111111", AgentNo = "FREE", Code = new Guid().ToString(), PaymentMode = 0, RetailerCode = "PAYPOINT", VendType = 0 }
             ).TurnOn());
         }
 
@@ -73,7 +73,7 @@ namespace SmartMeter.VirtualMeter
                 VatOnEnergy = 59,
                 VatRate = 13.5m
             },
-            new TopUpRequest { WseId = 403030, Amount = 10, RequesterId = "111111", AgentNo = "FREE", Code = new Guid().ToString(), PaymentMode = 0, RetailerCode = "PAYPOINT", VendType = 0 }
+            new TopUpRequest { MeterId = 403030, Amount = 10, RequesterId = "111111", AgentNo = "FREE", Code = new Guid().ToString(), PaymentMode = 0, RetailerCode = "PAYPOINT", VendType = 0 }
             ).TurnOn());
         }
 
@@ -93,7 +93,7 @@ namespace SmartMeter.VirtualMeter
                             VatOnEnergy = 59,
                             VatRate = 13.5m
                         },
-                        new TopUpRequest { WseId = 403030, Amount = 150, RequesterId = "111111", AgentNo = "FREE", Code = new Guid().ToString(), PaymentMode = 0, RetailerCode = "PAYPOINT", VendType = 0 }
+                        new TopUpRequest { MeterId = 403030, Amount = 150, RequesterId = "111111", AgentNo = "FREE", Code = new Guid().ToString(), PaymentMode = 0, RetailerCode = "PAYPOINT", VendType = 0 }
                        ).TurnOn());
         }
 
@@ -156,7 +156,7 @@ namespace SmartMeter.VirtualMeter
 
     public class StartNewMeterRequest
     {
-        public int WseId { get; set; }
+        public int MeterId { get; set; }
     }
 
 }

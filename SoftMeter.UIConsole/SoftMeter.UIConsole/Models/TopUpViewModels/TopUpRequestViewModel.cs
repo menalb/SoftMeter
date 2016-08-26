@@ -2,7 +2,7 @@
 {
     public class TopUpRequestViewModel
     {
-        public int WseId { get; set; }
+        public int MeterId { get; set; }
 
         public decimal Amount { get; set; }
     }

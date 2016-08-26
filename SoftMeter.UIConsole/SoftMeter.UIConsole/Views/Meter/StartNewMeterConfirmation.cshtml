@@ -2,7 +2,7 @@
 @{
     ViewBag.Title = "StartNewMeterConfirmation";
 }
-<h4>Top Up sent to meter WseId: @Model.MeterId</h4>
+<h4>Top Up sent to meter MeterId: @Model.MeterId</h4>
 
 
 <div id="notifications">
@@ -16,7 +16,7 @@
         var hub = $.connection.meterHub;
 
         hub.client.notify = function (name, notification) {
-            var encodedMsg = $('<li />').html("WseId: <b>" + notification.WseId + "</b> CreditAmount: <b>" + notification.CreditAmount + "</b> CustomerName: " + notification.CustomerName + " ReadingTime: " + notification.ReadingTime + " LastTransactionAmount " + notification.TxnAmount).html();
+            var encodedMsg = $('<li />').html("MeterId: <b>" + notification.MeterId + "</b> CreditAmount: <b>" + notification.CreditAmount + "</b> CustomerName: " + notification.CustomerName + " ReadingTime: " + notification.ReadingTime + " LastTransactionAmount " + notification.TxnAmount).html();
             $("#notifications ul").prepend("<li>" + encodedMsg + "</li>");
         };
 

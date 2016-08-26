@@ -12,15 +12,15 @@
 
     public class MeterInfo
     {
-        public MeterInfo(int wseId, string terminalId)
+        public MeterInfo(int meterId, string terminalId)
         {
-            WseId = wseId;
+            MeterId = meterId;
             TerminalId = terminalId;
         }
 
         public string SupplierCode { get; set; }        
         public string TerminalId { get; }
-        public int WseId { get; }        
+        public int MeterId { get; }        
         public string ServicePoint { get; }
         public string MeterNo { get; set; }
         public string MfgMeterNo { get; set; }

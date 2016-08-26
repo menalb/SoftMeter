@@ -2,6 +2,6 @@
 {
     public class StartNewMeterRequest
     {
-        public int WseId { get; set; }
+        public int MeterId { get; set; }
     }
 }

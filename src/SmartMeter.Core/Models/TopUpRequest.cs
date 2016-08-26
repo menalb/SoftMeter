@@ -2,7 +2,7 @@
 {
     public class TopUpRequest
     {
-        public int WseId { get; set; }
+        public int MeterId { get; set; }
         public decimal Amount { get; set; }
         public string RequesterId { get; set; }
         public string Code { get; set; }

@@ -24,7 +24,7 @@ namespace SoftMeter.UIConsole.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult StartNewMeter(StartNewMeterViewModel newMeter)
         {
-            _meterService.StartNew(new Models.Messages.StartNewMeterRequest { WseId = newMeter.MeterId });
+            _meterService.StartNew(new Models.Messages.StartNewMeterRequest { MeterId = newMeter.MeterId });
             return RedirectToAction(nameof(StartNewMeterConfirmation), newMeter);
         }
 

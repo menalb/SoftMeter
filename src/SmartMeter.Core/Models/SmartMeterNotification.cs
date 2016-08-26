@@ -12,7 +12,7 @@ namespace SmartMeter.Core.Models
         public string AgentNo { get; set; }
         public int TxnType { get; set; }
         public string RequesterId { get; set; }
-        public int WseId { get; set; }
+        public int MeterId { get; set; }
         public int SupplyType { get; set; }
         public string ServicePoint { get; set; }
         public string CustomerName { get; set; }
@@ -47,7 +47,7 @@ namespace SmartMeter.Core.Models
             ServicePoint = meterInfo.ServicePoint;
             SupplierCode = meterInfo.SupplierCode;
             TerminalId = meterInfo.TerminalId;
-            WseId = meterInfo.WseId;
+            MeterId = meterInfo.MeterId;
             VendCode = meterInfo.VendCode;
         }
 
@@ -70,7 +70,7 @@ namespace SmartMeter.Core.Models
                notification.AgentNo == AgentNo &&
                notification.TxnType == TxnType &&
                notification.RequesterId == RequesterId &&
-               notification.WseId == WseId &&
+               notification.MeterId == MeterId &&
                notification.SupplyType == SupplyType &&
                notification.ServicePoint == ServicePoint &&
                notification.CustomerName == CustomerName &&
@@ -115,7 +115,7 @@ namespace SmartMeter.Core.Models
             hashCode = (hashCode * 7) + AgentNo.GetHashCode();
             hashCode = (hashCode * 7) + TxnType.GetHashCode();
             hashCode = (hashCode * 7) + RequesterId.GetHashCode();
-            hashCode = (hashCode * 7) + WseId.GetHashCode();
+            hashCode = (hashCode * 7) + MeterId.GetHashCode();
             hashCode = (hashCode * 7) + SupplyType.GetHashCode();
             hashCode = (hashCode * 7) + ServicePoint.GetHashCode();
             hashCode = (hashCode * 7) + CustomerName.GetHashCode();

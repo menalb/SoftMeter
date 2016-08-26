@@ -40,7 +40,7 @@ namespace SmartMeter.VirtualMeter
             StartListener(_messagesQueueAddress, _incomingMessagesQueue,
                 topUpRequest =>
                 {
-                    if (_meterInfo.WseId == topUpRequest.WseId)
+                    if (_meterInfo.MeterId == topUpRequest.MeterId)
                         _meter.TopUp(topUpRequest);
                 });
 

@@ -12,7 +12,7 @@ namespace SoftMeter.UIConsole.Models
         public string AgentNo { get; set; }
         public int TxnType { get; set; }
         public string RequesterId { get; set; }
-        public int WseId { get; set; }
+        public int MeterId { get; set; }
         public int SupplyType { get; set; }
         public string ServicePoint { get; set; }
         public string CustomerName { get; set; }

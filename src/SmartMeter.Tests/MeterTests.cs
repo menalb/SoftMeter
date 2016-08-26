@@ -169,7 +169,7 @@ namespace SmartMeter.Tests
                 notificationSent.MfgMeterNo == meterInfo.MfgMeterNo &&
                 notificationSent.TerminalId == meterInfo.TerminalId &&
                 notificationSent.ServicePoint == meterInfo.ServicePoint &&
-                notificationSent.WseId == meterInfo.WseId
+                notificationSent.MeterId == meterInfo.MeterId
             ).Last();
         }
 
@@ -254,7 +254,7 @@ namespace SmartMeter.Tests
     {
         public static TopUpRequest Get()
         {
-            return new TopUpRequest { WseId = 403030, Amount = 50, RequesterId = "12345", AgentNo = "FREE", Code = new Guid().ToString(), PaymentMode = 0, RetailerCode = "PAYPOINT", VendType = 0 };
+            return new TopUpRequest { MeterId = 403030, Amount = 50, RequesterId = "12345", AgentNo = "FREE", Code = new Guid().ToString(), PaymentMode = 0, RetailerCode = "PAYPOINT", VendType = 0 };
         }
 
         public static TopUpRequest WithAmount(this TopUpRequest topUpRequest, decimal amount)
