@@ -13,7 +13,7 @@ namespace SoftMeter.UIConsole.Controllers
         [HttpPost]
         public IHttpActionResult MeterNotification(SoftMeterNotification notification)
         {
-            GetMessageHub().Clients.Group("Incoming").notify("App", notification);
+            GetMessageHub().Clients.Group("Meter" + notification.WseId).notify("App", notification);
 
             return Ok();
         }

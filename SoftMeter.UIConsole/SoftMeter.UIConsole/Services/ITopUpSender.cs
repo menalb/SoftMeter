@@ -1,4 +1,4 @@
-﻿using SoftMeter.UIConsole.Models;
+﻿using SoftMeter.UIConsole.Models.Messages;
 using System.Threading.Tasks;
 
 namespace SoftMeter.UIConsole.Services

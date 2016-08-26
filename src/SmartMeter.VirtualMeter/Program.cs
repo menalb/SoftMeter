@@ -116,18 +116,18 @@ namespace SmartMeter.VirtualMeter
 
     public class ServerMeterListener
     {
-        public static void ListenStartNewMeter(string hostname, Action<StartNewMeter> onMessageReceived)
+        public static void ListenStartNewMeter(string hostname, Action<StartNewMeterRequest> onMessageReceived)
         {
             var factory = new ConnectionFactory { HostName = hostname };
             using (var connection = factory.CreateConnection())
             {
                 using (var channel = connection.CreateModel())
                 {
-                    channel.ExchangeDeclare(exchange: nameof(StartNewMeter), type: "fanout");
+                    channel.ExchangeDeclare(exchange: nameof(StartNewMeterRequest), type: "fanout");
 
                     var queueName = channel.QueueDeclare().QueueName;
 
-                    channel.QueueBind(queue: queueName, exchange: nameof(StartNewMeter), routingKey: "");
+                    channel.QueueBind(queue: queueName, exchange: nameof(StartNewMeterRequest), routingKey: "");
 
                     channel.BasicQos(prefetchSize: 0, prefetchCount: 1, global: false);
 
@@ -138,7 +138,7 @@ namespace SmartMeter.VirtualMeter
                         var body = ea.Body;
                         var message = Encoding.UTF8.GetString(body);
 
-                        var startNewMeterRequest = JsonConvert.DeserializeObject<StartNewMeter>(message);
+                        var startNewMeterRequest = JsonConvert.DeserializeObject<StartNewMeterRequest>(message);
 
                         Console.WriteLine($"Start new Meter request: {message}");
 
@@ -154,7 +154,7 @@ namespace SmartMeter.VirtualMeter
         }
     }
 
-    public class StartNewMeter
+    public class StartNewMeterRequest
     {
         public int WseId { get; set; }
     }

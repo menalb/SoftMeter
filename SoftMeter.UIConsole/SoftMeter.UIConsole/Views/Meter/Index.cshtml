@@ -1,31 +1,28 @@
-﻿
+﻿@model SoftMeter.UIConsole.Models.StartNewMeterViewModel
 @{
     ViewBag.Title = "Index";
 }
 
 <h2>Index</h2>
 
-<div id="notifications">
-    <ul>
+<div>
+    @using (Html.BeginForm("StartNewMeter", "Meter", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {
+        @Html.AntiForgeryToken()
+        <h4>Top Up Meter</h4>
+        <hr />
+        @Html.ValidationSummary("", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(x=>x.MeterId, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(x=>x.MeterId, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" class="btn btn-default" value="Submit" />
+            </div>
+        </div>
+    }
 
-    </ul>
 </div>
-
-<script type="text/javascript">
-
-    $(document).ready(function () {
-
-        var hub = $.connection.meterHub;
-
-        hub.client.notify = function (name, notification) {
-            var encodedMsg = $('<li />').html("WseId: <b>" + notification.WseId + "</b> CreditAmount: <b>" + notification.CreditAmount + "</b> CustomerName: " + notification.CustomerName + " ReadingTime: " + notification.ReadingTime + " LastTransactionAmount " + notification.TxnAmount).html();
-            $("#notifications ul").prepend("<li>" + encodedMsg + "</li>");
-        };
-
-        $.connection.hub.start().done(function () {
-            hub.server.joinGroup("Incoming");
-        });
-
-    });
-
-</script>

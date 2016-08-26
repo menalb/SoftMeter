@@ -1,8 +1,8 @@
 ﻿using System.Threading.Tasks;
-using SoftMeter.UIConsole.Models;
 using RabbitMQ.Client;
 using Newtonsoft.Json;
 using System.Text;
+using SoftMeter.UIConsole.Models.Messages;
 
 namespace SoftMeter.UIConsole.Services
 {

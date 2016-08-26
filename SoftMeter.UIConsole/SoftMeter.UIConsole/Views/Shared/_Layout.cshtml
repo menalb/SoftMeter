@@ -10,7 +10,6 @@
     @RenderSection("scripts", required: false)
     @Scripts.Render("~/bundles/signalR")
 
-
     <script src="../signalr/hubs"></script>
 
 </head>
@@ -30,6 +29,7 @@
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Meter", "Index", "TopUp")</li>
                     <li>@Html.ActionLink("TopUp", "Index", "TopUp")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")

@@ -231,10 +231,13 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\SmartMeterNotification.cs" />
-    <Compile Include="Models\TopUpRequest.cs" />
+    <Compile Include="Models\Messages\StartNewMeterRequest.cs" />
+    <Compile Include="Models\Messages\TopUpRequest.cs" />
+    <Compile Include="Models\StartNewMeterViewModel.cs" />
     <Compile Include="Models\TopUpViewModels\TopUpRequestViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\ITopUpSender.cs" />
+    <Compile Include="Services\MeterService.cs" />
     <Compile Include="Services\TopUpSender.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -303,6 +306,7 @@
     <Content Include="Views\TopUp\Index.cshtml" />
     <Content Include="Views\TopUp\TopUpConfirmation.cshtml" />
     <Content Include="Views\Meter\Index.cshtml" />
+    <Content Include="Views\Meter\StartNewMeterConfirmation.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

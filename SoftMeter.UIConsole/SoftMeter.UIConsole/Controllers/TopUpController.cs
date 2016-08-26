@@ -27,7 +27,7 @@ namespace SoftMeter.UIConsole.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult TopUp(TopUpRequestViewModel request)
         {
-            _topUpSender.TopUpAsync(new Models.TopUpRequest { WseId = request.WseId, Amount = request.Amount, RequesterId = "123456" });
+            _topUpSender.TopUpAsync(new Models.Messages.TopUpRequest { WseId = request.WseId, Amount = request.Amount, RequesterId = "123456" });
             return RedirectToAction(nameof(TopUpConfirmation), request);
         }
 

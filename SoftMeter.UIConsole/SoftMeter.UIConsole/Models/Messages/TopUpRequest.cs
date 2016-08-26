@@ -1,4 +1,4 @@
-﻿namespace SoftMeter.UIConsole.Models
+﻿namespace SoftMeter.UIConsole.Models.Messages
 {
     public class TopUpRequest
     {
